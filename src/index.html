@@ -19,6 +19,11 @@
 
 	<!-- Define your gradient here - use online tools to find a gradient matching your branding-->
 	<style>
+		@media (max-width: 576px){
+			.ship {
+				display: none;
+			}
+		}
 		.gradient {
 			background: linear-gradient(90deg, #207AAA 0%, #99EEF9 100%);
 		}
@@ -91,6 +96,32 @@
 		.hero-heading {
 			color: #FFE7BA;
 		}
+		@media (max-width: 1023px){
+			
+
+			#nav-toggle {
+				border-color: #ffffff!important;
+				color: #ffffff!important;
+			}
+
+			#header ul li a {
+				color: #000000;
+			}
+
+			#header.bg-white #nav-toggle {
+				border-color: #000000!important;
+    			color: #000000!important;
+			}
+		}
+
+		@media (max-width: 576px){
+			.hero .left-col {
+				align-items: center;
+			}
+			.ship {
+				display: none;
+			}
+		}
 	</style>
 
 </head>
@@ -138,11 +169,11 @@
 
 
 <!--Hero-->
-<div class="pt-24">
+<div class="pt-24 hero">
 
 	<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 		<!--Left Col-->
-		<div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+		<div class="left-col flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
 			<p class="relative top-10 tracking-loose w-full" style="top:18px;">What are you waiting for?</p> 
 			<h1 class="hero-heading my-4 text-5xl font-bold leading-tight">Book Your Cruise</h1>
 			<p class="leading-normal text-2xl mb-8 text-gray-200">Come get the lowest price fast and easy!</p>
@@ -185,7 +216,7 @@
 		</div>
 		<!--Right Col-->
 		<div class="w-full md:w-3/5 py-6 text-center">
-			<img class="inline-flex w-full md:w-4/5 z-50" src="./assets/ship.png">
+			<img class="ship inline-flex w-full md:w-4/5 z-50" src="./assets/ship.png">
 		</div>
 		
 	</div>
@@ -581,6 +612,8 @@
   <!-- jQuery if you need it
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
+  <script src="lottie.js"></script>
+  <script src="script.js"></script>
 
 <script>
 	var scrollpos = window.scrollY;
